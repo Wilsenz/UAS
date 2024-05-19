@@ -10,7 +10,7 @@ const EmojipediaLinks = () => {
           <img
             src={iconicPlace}
             alt={province}
-            className="emojipedia-image"
+        
           />
         </Link>
       ))}
