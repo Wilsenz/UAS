@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/Page2",
+      "destination": "/Food_menu_Aceh"
+    },
+  ]
+}
