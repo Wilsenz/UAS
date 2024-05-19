@@ -4,7 +4,7 @@ const emojipedia = [
     province: "Aceh",
     iconicPlace:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Meuseujid_Raya_Baiturrahman%2C_Aceh.jpg/1200px-Meuseujid_Raya_Baiturrahman%2C_Aceh.jpg",
-    link: "#/Food_menu_Aceh",
+    link: "./Food_menu_Aceh",
     
   },
   {
@@ -55,4 +55,11 @@ const emojipedia = [
   },
 ];
 
-export default emojipedia;
+// Generate HTML links
+const links = emojipedia.map(({ province, link }) => `<a href="${link}">${province}</a>`);
+
+// Join the links into a single string
+const linksHTML = links.join(" ");
+
+// Output the result
+console.log(linksHTML);
