@@ -8,7 +8,7 @@ import "./App.css";
 import Header from "./header.jsx";
 import Footer from "./footer.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import EmojipediaLinks from "./EmojipediaLinks"; // Import the EmojipediaLinks component
+import EmojipediaLinks from "./EmojipediaLinks.jsx"; // Import the EmojipediaLinks component
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
