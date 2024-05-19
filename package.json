@@ -4,13 +4,16 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "react-scripts build", 
+    "vercel-build": "npm run build" 
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12"
+    "cheerio": "^1.0.0-rc.12",
+    "react-scripts": "4.0.3"
   },
   "devDependencies": {},
   "description": ""
