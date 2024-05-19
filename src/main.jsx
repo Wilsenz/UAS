@@ -14,26 +14,26 @@ import Aboutus from "./aboutus.jsx";
 import './App.css'
 import Header from './header.jsx'
 import Footer from './footer.jsx'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <BrowserRouter>
-  <Header />
-  <Routes>
-    <Route path="/" element={<Frontpage />} />  
-    <Route path="/Page2" element={<Provincemenu />} />  
-    <Route path="/Food_menu_Aceh" element={<FoodMenu />} />
-    <Route path="/Food_menu_JawaBarat" element={<FoodMenu1 />} />
-    <Route path="/Food_menu_KalimantanBarat" element={<FoodMenu2 />} />
-    <Route path="/Food_menu_SulawesiSelatan" element={<FoodMenu3 />} />
-    <Route path="/Food_menu_NTT" element={<FoodMenu4 />} />
-    <Route path="/Food_menu_Maluku" element={<FoodMenu5 />} />
-    <Route path="/Food_menu_PapuaBarat" element={<FoodMenu6 />} />
-    <Route path="/Quiz_Makanan" element={<Quiz />} />
-    <Route path="/aboutus" element={<Aboutus />} />
-  </Routes>
-  <Footer />
-  </BrowserRouter>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Frontpage />} />  
+        <Route path="/Page2" element={<Provincemenu />} />  
+        <Route path="/Food_menu_Aceh" element={<FoodMenu />} />
+        <Route path="/Food_menu_JawaBarat" element={<FoodMenu1 />} />
+        <Route path="/Food_menu_KalimantanBarat" element={<FoodMenu2 />} />
+        <Route path="/Food_menu_SulawesiSelatan" element={<FoodMenu3 />} />
+        <Route path="/Food_menu_NTT" element={<FoodMenu4 />} />
+        <Route path="/Food_menu_Maluku" element={<FoodMenu5 />} />
+        <Route path="/Food_menu_PapuaBarat" element={<FoodMenu6 />} />
+        <Route path="/Quiz_Makanan" element={<Quiz />} />
+        <Route path="/aboutus" element={<Aboutus />} />
+      </Routes>
+      <Footer />
+    </Router>
   </React.StrictMode>,
 );
