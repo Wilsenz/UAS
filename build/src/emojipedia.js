@@ -55,4 +55,11 @@ const emojipedia = [
   },
 ];
 
-export default emojipedia;
+// Generate HTML links
+const links = emojipedia.map(({ province, link }) => `<a href="${link}">${province}</a>`);
+
+// Join the links into a single string
+const linksHTML = links.join(" ");
+
+// Output the result
+console.log(linksHTML);
