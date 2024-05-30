@@ -22,10 +22,6 @@ const foodImg = [
   },
 ];
 
-useEffect(() => {
-    fetchFoodData();
-  }, []);
-
 const MainMenu = ({ setView }) => (
   <div className="menu">
     <h1>Makanan Tradisional Aceh</h1>
