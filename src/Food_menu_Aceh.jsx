@@ -40,9 +40,12 @@ const FoodMenu = ({ setView, currentPage, setCurrentPage }) => {
 const fetchFoodData = async () => {
   try {
     setLoading(true);
-    // Change the URL to fetch data from your Ngrok-hosted server
-    const response = await axios.get("https://5988-2001-448a-20a0-204a-c5bd-436d-5fd7-d417.ngrok-free.app/api/food-data-aceh");
-    setFoodData(response.data);
+    const response = await axios.get("https://7cb0-2001-448a-20a0-204a-c5bd-436d-5fd7-d417.ngrok-free.app/api/food-data-aceh");
+    const formattedData = response.data.map(item => ({
+      name: item.name,
+      description: item.description
+    }));
+    setFoodData(formattedData);
   } catch (error) {
     console.error("Error fetching food data:", error);
   } finally {
@@ -50,7 +53,9 @@ const fetchFoodData = async () => {
   }
 };
 
-
+  useEffect(() => {
+    fetchFoodData();
+  }, []);
   
   const fetchFact = async () => {
     try {
