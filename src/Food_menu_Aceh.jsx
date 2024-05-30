@@ -38,20 +38,16 @@ const FoodMenu = ({ setView, currentPage, setCurrentPage }) => {
   const [loading, setLoading] = useState(false);
 
 const fetchFoodData = async () => {
-  try {
-    setLoading(true);
-    const response = await axios.get("https://7cb0-2001-448a-20a0-204a-c5bd-436d-5fd7-d417.ngrok-free.app/api/food-data-aceh");
-    const formattedData = response.data.map(item => ({
-      name: item.name,
-      description: item.description
-    }));
-    setFoodData(formattedData);
-  } catch (error) {
-    console.error("Error fetching food data:", error);
-  } finally {
-    setLoading(false);
-  }
-};
+    try {
+      setLoading(true);
+      const response = await axios.get("http://localhost:3000/api/food-data-aceh");
+      setFoodData(response.data);
+    } catch (error) {
+      console.error("Error fetching food data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     fetchFoodData();
@@ -61,7 +57,7 @@ const fetchFoodData = async () => {
     try {
       setLoading(true); 
       const response = await axios.get(
-        "https://7cb0-2001-448a-20a0-204a-c5bd-436d-5fd7-d417.ngrok-free.app/api/unique-facts-aceh"
+        "http://localhost:3000/api/unique-facts-aceh"
       );
       console.log("Response data:", response.data);
       const htmlContent = response.data;
