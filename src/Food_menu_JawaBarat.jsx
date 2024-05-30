@@ -142,7 +142,7 @@ const FoodMenu = ({ setView, currentPage, setCurrentPage }) => {
         ))}
       </div>
       <div className="random-fact">
-        <h2>Fakta Menarik dari jawa barat</h2>
+        <h2>Fakta Menarik dari Jawa Barat</h2>
         {loading ? (
           <p>Loading...</p>
         ) : (
