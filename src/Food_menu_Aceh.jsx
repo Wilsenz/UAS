@@ -50,9 +50,7 @@ const fetchFoodData = async () => {
   }
 };
 
-  useEffect(() => {
-    fetchFoodData();
-  }, []);
+
   
   const fetchFact = async () => {
     try {
