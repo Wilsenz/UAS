@@ -50,9 +50,6 @@ app.get('/api/food-data-aceh', async (req, res) => {
   }
 });
 
-  useEffect(() => {
-    fetchFoodData();
-  }, []);
   
   const fetchFact = async () => {
     try {
