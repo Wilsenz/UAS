@@ -38,17 +38,16 @@ const FoodMenu = ({ setView, currentPage, setCurrentPage }) => {
   const [loading, setLoading] = useState(false);
 
 const fetchFoodData = async () => {
-  try {
-    setLoading(true);
-    // Change the URL to fetch data from your Ngrok-hosted server
-    const response = await axios.get("https://5988-2001-448a-20a0-204a-c5bd-436d-5fd7-d417.ngrok-free.app/api/food-data-aceh");
-    setFoodData(response.data);
-  } catch (error) {
-    console.error("Error fetching food data:", error);
-  } finally {
-    setLoading(false);
-  }
-};
+    try {
+      setLoading(true);
+      const response = await axios.get("http://localhost:3000/api/food-data-aceh");
+      setFoodData(response.data);
+    } catch (error) {
+      console.error("Error fetching food data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
   
   const fetchFact = async () => {
     try {
