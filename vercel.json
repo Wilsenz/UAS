@@ -10,10 +10,11 @@
     {
       "src": "/server/(.*)",
       "dest": "/server/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
+    }, 
+  ],
+  "rewrites":  [
+    {"source": "/(.*)", "destination": "/"}
   ]
 }
+
+
