@@ -107,7 +107,50 @@ const fetchFoodData = async () => {
     }
   };
 
-
+ return (
+    <div className="menu">
+      <HoverEffect>
+        <Link className="big-button-link" to="/Page2">
+          <h3>Return</h3>
+        </Link>
+      </HoverEffect>
+      <div className="menu-horizontal">
+        {currentFoods.map((food, index) => (
+          <div
+            key={index}
+            className="food-container"
+          >
+            <div className="food-image-container">
+              {currentFoodImage.map((foodImg, index) => (
+                <img className="food-image" src={foodImg.img} />
+              ))}
+            </div>
+            <div className="food-content"> 
+              <h3 className="food-name">{food.name}</h3>
+              <p className="food-description">{food.description}</p>
+              <div className="nav-button">
+                <HoverEffect>
+                  <button onClick={prevPage}>Prev</button>
+                </HoverEffect>
+                <HoverEffect>
+                  <button onClick={nextPage}>Next</button>
+                </HoverEffect>
+              </div>
+            </div>    
+          </div>
+        ))}
+      </div>
+      <div className="random-fact">
+        <h2>Fakta Menarik dari Bali</h2>
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <p>{randomFact}</p>
+        )}
+      </div>
+    </div>
+  );
+};
 
 
 const App = () => {
