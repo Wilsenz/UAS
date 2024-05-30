@@ -49,10 +49,14 @@ const scrapeFoodDataAceh = async () => {
 
 app.get('/api/food-data-aceh', async (req, res) => {
   try {
-    const foodDataAceh = await scrapeFoodDataAceh();
+    // Fetch data directly from your server URL
+    const response = await axios.get('https://5988-2001-448a-20a0-204a-c5bd-436d-5fd7-d417.ngrok-free.app/api/food-data-aceh');
+    const foodDataAceh = response.data;
+
     res.json(foodDataAceh);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.error('Error fetching food data:', error.message);
+    res.status(500).json({ error: 'Failed to fetch food data' });
   }
 });
 
