@@ -137,7 +137,7 @@ const fetchFoodData = async () => {
         ))}
       </div>
       <div className="random-fact">
-        <h2>Fakta Menarik dari Bali</h2>
+        <h2>Fakta Menarik dari Aceh</h2>
         {loading ? (
           <p>Loading...</p>
         ) : (
